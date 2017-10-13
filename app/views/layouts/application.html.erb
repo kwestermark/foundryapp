@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Foundry App</title>
+    <title>Orbit Cycles</title>
     
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -40,7 +40,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-          <a class="navbar-brand" href="#">Cycle On | Orbit Bikes</a>
+          <a class="navbar-brand" href="#">Cycle | Orbit Bikes</a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
@@ -52,16 +52,16 @@
         </div>
       </nav>
 
-       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+       <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner">
     <div class="item active">
       <%= image_tag("bike4.jpg", class: "img-responsive my-image") %>
     </div>
@@ -76,29 +76,32 @@
   </div>
 
   <!--Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span></a>
   </div>
 
 <%= yield %>
 
  <!--Footer Section -->
-  <footer class="footer-container">
-    <div>
-      <p>&copy; Web Development by Kristina R. Taylor 2017</p>
+  <div class="footer-container">
+    <div class="container">
       <h4 class="_14">Follow me on</h4>
     <ul class="social-icons">
         <li><a href="https://www.facebook.com/kristina.westermarktaylor" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
         <li><a href="https://twitter.com/kwestermark1" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
         <li><a href="https://www.linkedin.com/in/kristinawestermarktaylor/" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
     </ul>
-    </div>
+    <p> &copy; Web Development by Kristina R. Taylor 2017</p>
   </div>
-  </footer>
+</div>
+
+  <!--End Footer Section -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
   </body>

@@ -2,40 +2,82 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 h1{
 	padding-bottom: 20px;
-}
-table{
-	text-align:left;
-	margin-left:auto; 
-    margin-right:auto;
-    border-collapse: separate;
-  	border-spacing: 50px 0;
-}
-
-table tr td:empty {
-    width: 60px;
-}
-
-table tr td {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.action {
-	padding: 5px 0;
+	text-align: center;
+	color: black;
 }
 
 .field {
 	color: black;
 }
 
-td {
-  padding: 5px 0;
- }
+* {
+    box-sizing: border-box;
+}
 
-th{
-	text-align: center;
-	font-size: 24px;
-	}
+/* Create three columns of equal width */
+.columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+}
+
+/* Style the list */
+.data {
+    list-style-type: none;
+    border: 1px solid black;
+    color: black;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.product:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Product header */
+.product .header {
+    background-color: #111;
+    color: red;
+    font-size: 25px;
+}
+
+/* List items */
+.product li {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+/* Grey list item */
+.product .action .grey {
+    background-color: #eee;
+    font-size: 20px;
+    color: black;
+}
+
+/* The "Sign Up" button */
+.button {
+    background-color: #4CAF50;
+    border: black;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Change the width of the three columns to 100% 
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
 

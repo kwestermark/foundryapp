@@ -1,32 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1>Best Sellers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Action</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container-fluid">
+  <div class="row">
     <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td class="action"><%= link_to 'Show', product %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="columns">
+      <ul class="product">
+        <li class="header"><%= product.name %></li>
+        <li class="data"><%= image_tag(product.image_url, class: "img-responsive") %></li>
+        <li><%= product.price %></li>
+        <li><%= product.description %></li>
+        <li><%= product.color %></li>
+        <li class="action"><%= link_to 'Show', product %>  <%= link_to 'Edit', edit_product_path(product) %>
+         <%= link_to 'Destroy', product, method: :delete, data:{ confirm: 'Are you sure?' } %></a></li>
+      </ul>
+</div>
 
+    <% end %>
+  </div>
+</div>
+  
 <br>
 
 <%= link_to 'New Product', new_product_path %>
