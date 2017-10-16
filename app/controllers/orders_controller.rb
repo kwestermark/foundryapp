@@ -1,8 +1,6 @@
 class OrdersController < ApplicationController
 end
 
-lass OrdersController < ApplicationController
-
   def index
   end
 
