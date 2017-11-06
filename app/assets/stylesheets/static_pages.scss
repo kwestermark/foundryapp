@@ -5,18 +5,16 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
-body {
+html, body {
     font-family: 'Lato', sans-serif;
     color: #00000;
     background: #eeeeee;
     padding:60px 0;
     margin-bottom: 60px;
     position: relative;
-  height: auto;
-  min-height: 100%;
-
+    height: 100%;
+    margin:0;
 }
-
 
 a {
     text-decoration: none;
@@ -60,8 +58,8 @@ ul {
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
 
     margin: 40px auto;
-    height: 50%;
-    width: 75%;
+    height: 25%;
+    width: 50%;
 }
 
 .carousel-caption{
@@ -100,18 +98,17 @@ ul {
 
 /**Footer **/
 
-.footer-container {
-    
-  position: fixed;
-  right: 0;
+.footer {
+  position: relative;
   bottom: 0;
+  width: 100%;
   left: 0;
   padding: 1rem;
   text-align: center;
   background-color: #3a3737;
 }
 
-.footer-container p {
+.footer p {
   margin: 20px 0;
   color: #ffffff;
 }
