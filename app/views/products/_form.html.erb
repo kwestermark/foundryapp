@@ -11,34 +11,42 @@
     </div>
   <% end %>
 
-  <div class="container-fluid text-center">   
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-7 thumbnail">
+        <% unless @product.image_url.blank? %>
+          <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: @product.image_url) %>
+        <% end %>
+      </div>
+    <div class="col-xs-12 col-md-5 product-specs">
 
-  <div class="field">
+      <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class:"form-control", placeholder: "Enter Product Name" %>
+    </div>
+
+    <div class="form-group">
     <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
+    <%= f.text_area :description, class:"form-control", placeholder: "Enter Product Description" %>
+    </div>
 
-  <div class="field">
+    <div class="form-group">
     <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
-  </div>
+    <%= f.text_field :image_url, class:"form-control", placeholder: "Enter Image Url" %>
+    </div>
 
-  <div class="field">
+    <div class="form-group">
     <%= f.label :color %>
-    <%= f.text_field :color %>
-  </div>
+    <%= f.text_field :color, class:"form-control", placeholder: "Enter Product Colour" %>
+    </div>
 
-  <div class="field">
+    <div class="form-group">
     <%= f.label :price %>
-    <%= f.text_field :price %>
-  </div>
+    <%= f.text_field :price, class:"form-control", placeholder: "Enter Product Price" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
+    <div class="actions">
+    <%= f.submit class:"btn btn-default" %>
   </div>
-</form>
+  </div><!--col-md-6-->
+  </div><!--row-->
 <% end %>

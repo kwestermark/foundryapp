@@ -1,27 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Best Sellers</h1>
-<%= @test_variable %>
-
-<div class="container-fluid">
-  <div class="row">
-    <% @products.each do |product| %>
-    <div class="columns">
-      <ul class="product">
-        <li class="header"><%= product.name %></li>
-        <li class="data"><%= image_tag(product.image_url, class: "img-responsive") %></li>
-        <li><%= product.price %></li>
-        <li><%= product.description %></li>
-        <li><%= product.color %></li>
-        <li class="action"><%= link_to 'Show', product %>  <%= link_to 'Edit', edit_product_path(product) %>
-         <%= link_to 'Destroy', product, method: :delete, data:{ confirm: 'Are you sure?' } %></a></li>
-      </ul>
-</div>
-
-    <% end %>
+<% @products.each_slice(3) do |products| %>
+    <div class="container">
+    <div class="col-md-12 col-sm-12 colxs-12 column productbox">
+    <% products.each do |product| %>
+      <div class="col-md-4 col-sm-4 colxs-4" data-mh="each-product">
+        <div class="producttitle"><%= link_to product.name, product, data: {mh: 'product-name'} %></div>
+        <%= image_tag(product.image_url, class: 'img-responsive', data: {mh: 'product-image'}) %>
+        <div class="productdesc"><p data-mh="product-description"><%= product.description %></p></div>
+        <div class="productprice"><p class="product-price" data-mh="product-price">$<%= product.price %>.00</p></div>
+        <p><%= link_to 'Edit', edit_product_path(product) %>  <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+<% end %>
+    </div>
   </div>
 </div>
-  
-<br>
+<% end %>
 
 <%= link_to 'New Product', new_product_path %>

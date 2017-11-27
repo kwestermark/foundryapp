@@ -44,6 +44,16 @@
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
+
+          <!-- Search Box -->
+        <%= form_tag("/products", method: "get", class:"navbar-form navbar-right") do %> 
+          <div class="form-group">
+            <%= label_tag(:q, "Search for:", class:"hidden") %>
+            <%= text_field_tag(:q, "", type:"text", class:"form-control", placeholder:"Search") %>
+          </div>
+        <%= submit_tag("Search", class:"btn btn-default") %>
+        <% end %>
+
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to 'Home', root_path %></li>
             <li><%= link_to 'Products', products_path %></li>
@@ -59,7 +69,7 @@
  <!--Footer Section -->
   <footer>
   <div class="footer">
-    <div class="container">
+    <div class="container-fluid">
       <h4 class="_14">Follow me on</h4>
     <ul class="social-icons">
         <li><a href="https://www.facebook.com/kristina.westermarktaylor" class="social-icon"> <i class="fa fa-facebook"></i></a></li>

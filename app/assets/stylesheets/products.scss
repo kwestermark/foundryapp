@@ -2,10 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url("bootstrap/bootstrap.min.css");
+@import url("bootstrap-override.css");
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
-
-h1{
-	padding-bottom: 20px;
+h1, h2, p{
 	text-align: center;
 	color: black;
 }
@@ -14,10 +15,8 @@ h1{
 	color: black;
 }
 
+/*create product container */
 
-* {
-    box-sizing: border-box;
-}
 
 /* Create three columns of equal width */
 .columns {
@@ -44,14 +43,14 @@ h1{
 
 /* Product header */
 .product .header {
-    background-color: #111;
-    color: red;
+    background-color: #8b9dc3;
+    color: #ffffff;
     font-size: 25px;
 }
 
 /* List items */
 .product li {
-    border: 1px solid black;
+    border: none;
     padding: 20px;
     text-align: center;
     color: black;
@@ -65,20 +64,11 @@ h1{
 }
 
 /* The "Sign Up" button */
-.button {
-    background-color: #4CAF50;
-    border: black;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-}
 
-.btn-default{
+.btn-default, .btn-primary{
     background-color: #4099FF;
     border: none;
-    color: white;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -86,7 +76,6 @@ h1{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-
 }
 
 /* Change the width of the three columns to 100% 
@@ -96,3 +85,70 @@ h1{
         width: 100%;
     }
 }
+
+#header-title{
+    text-align: center;
+    font-size: 48px;
+}
+.productbox {
+    background-color:#ffffff;
+    padding:10px;
+    margin-bottom:10px;
+    -webkit-box-shadow: 0 8px 6px -6px  #999;
+}
+
+.producttitle {
+    font-weight: bold;
+    padding:5px 0 5px 0;
+    text-align: center;
+}
+
+.productprice {
+    border-top:1px solid #dadada;
+    padding-top:5px;
+}
+
+.thumbnail{
+    text-align: left;
+    border: 0px;
+}
+
+.product-desc{
+    text-align: left;
+}
+
+.product-color{
+    text-align: left;
+}
+
+
+.product>img{
+    max-width: 230px;
+}
+
+.content-wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border: 0px;
+    border-radius: 0px;
+}
+
+.container-fluid{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.view-wrapper {
+    float: right;
+    max-width: 70%;
+    margin-top: 25px;
+}
+
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 100%;
+}
+
