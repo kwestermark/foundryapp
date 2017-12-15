@@ -1,2 +1,12 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<div class="container">
+  <h1>Get in touch</h1>
+
+  <%= render 'form' %>
+</div>
+<div class="contact-page">
+  <%= link_to root_path do %>
+   <%= image_tag "contact.jpeg", class: "contact-page" %>
+<% end %>
+
+</div>
+
