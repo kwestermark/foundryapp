@@ -12,6 +12,14 @@
 </head>
 <body class="anchor-top">
 
+  <% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
+
+<% if alert %>
+    <p id="alert" class="alert alert-info"><%= alert %></p>
+<% end %>
+
   <!-- Fixed navbar -->
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
@@ -30,6 +38,7 @@
       <li><%= link_to 'Products', products_path %></li>
       <li><%= link_to 'About', static_pages_about_path %></li>
       <li><%= link_to 'Contact', static_pages_contact_path %>
+      <li><%= link_to 'Users', users_path %></li>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
