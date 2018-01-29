@@ -9,4 +9,5 @@ class ApplicationController < ActionController::Base
     sign_out user
   end
 
+
 end
