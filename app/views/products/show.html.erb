@@ -1,5 +1,4 @@
-
-    <div class="card">
+    <div class="card"
       <div class="container">
         <div class="row">
           <div class="preview col-md-6">
@@ -25,9 +24,7 @@
             <h3 class="product-title"><%= @product.name %></h3>
 
             <p><strong>Average Rating:</strong>
-              <p>
-
-              <div id="average_rating" class="rating" data-score="<%= @product.average_rating %>"></div> </p></div>
+            <p><div id="average_rating" class="rating" data-score="<%= @product.average_rating %>"></div> </p></div>
          
             <span class="product-description"><%= @product.description %></span>
             <span class="price">Current Price: <span>$<%= @product.price %>.00</span></span>
@@ -35,28 +32,22 @@
             <span class="price">Current Colors: <span><%= @product.color %></span></span>
 
             <div class="action">
-              <button class="add-to-cart btn btn-default" type="button">add to cart</button>
-              <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
-            </div>
-          </div>
-          <div class="col-md-3">
-              <span class="monospaced">Write a Review</span>
-             </div>
-        </div>
-      </div> 
-    </div>
+              <button class="add-to-cart btn btn-default" type="button">add to cart</button></div>
 
-<div class="card">
+              <button type="button" class="btn btn-default add-to-cart" data-toggle ="modal", data-target="#myModal">write a review</button>
+
       <div class="container">
-        <div class="wrapper row">
-          <div class="preview col-md-6">
-
-            <p>
-    <div class="rating"></div>
-  </p>
-              <%= render 'new_comment' %>
+        <div class="row">   
+          <div class="preview col-md-12">
+            <p><strong>Here's what People are saying:</strong></p>
               <%= render 'comments' %>
+                <div class="col-md-12 pagination-container">
+                  <%= will_paginate @comments, class: "comment-pagination"%>
+                </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+   <%= render partial: 'new_comment' %>
