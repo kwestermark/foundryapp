@@ -24,8 +24,10 @@
             <h3 class="product-title"><%= @product.name %></h3>
 
             <p><strong>Average Rating:</strong>
-            <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></div>
-         
+      
+              <span>Average rating   </span>
+              <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></p></div>
+      
             <span class="product-description"><%= @product.description %></span>
             <span class="price">Current Price: <span>$<%= @product.price %>.00</span></span>
             <span class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>Write a review!</strong></span>
@@ -36,12 +38,13 @@
 
               <button type="button" class="btn btn-default add-to-cart" data-toggle ="modal", data-target="#myModal">write a review</button>
 
+
       <div class="container">
         <div class="row">   
           <div class="preview col-md-12">
             <p><strong>Here's what People are saying:</strong></p>
               <%= render 'comments' %>
-                <div class="col-md-12 pagination-container">
+               
                   <%= will_paginate @comments, class: "comment-pagination"%>
                 </div>
             </div>
@@ -49,5 +52,4 @@
         </div>
       </div>
     </div>
-  </div>
    <%= render partial: 'new_comment' %>
