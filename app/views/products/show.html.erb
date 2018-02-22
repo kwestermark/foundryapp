@@ -24,13 +24,11 @@
             <h3 class="product-title"><%= @product.name %></h3>
 
             <p><strong>Average Rating:</strong>
-      
-              <span>Average rating   </span>
               <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></p></div>
       
             <span class="product-description"><%= @product.description %></span>
             <span class="price">Current Price: <span>$<%= @product.price %>.00</span></span>
-            <span class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>Write a review!</strong></span>
+            
             <span class="price">Current Colors: <span><%= @product.color %></span></span>
 
             <div class="action">
