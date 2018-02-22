@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url("bootstrap/bootstrap.min.css");
-@import url("bootstrap-override.css");
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
-
 body {
   font-family: 'open sans'; }
 
@@ -14,10 +10,6 @@ img {
 
 h2, h4, p {
     text-align: left;
-}
-
-.comment-review {
-  background-color: white;
 }
 
 .preview {

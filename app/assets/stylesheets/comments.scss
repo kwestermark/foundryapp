@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 .form-comment {
   margin-top: 4rem;
   padding: 1.5rem 2rem;
@@ -53,6 +55,7 @@
   hr {
     margin: 1rem 0;
     border-top: 1px solid rgb(204, 204, 204);
+    border-top-color: black;
   }
 }
 

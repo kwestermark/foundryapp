@@ -34,22 +34,18 @@
             <span class="price">Current Colors: <span><%= @product.color %></span></span>
 
             <div class="action">
-              <button class="add-to-cart btn btn-default" type="button">add to cart</button></div>
+             
+              <button type="button" class="btn btn-default" data-toggle ="modal", data-target="#myModal">write a review</button></div>
 
-              <button type="button" class="btn btn-default add-to-cart" data-toggle ="modal", data-target="#myModal">write a review</button>
-
-
-      <div class="container">
-        <div class="row">   
+      
           <div class="preview col-md-12">
-            <p><strong>Here's what People are saying:</strong></p>
-              <%= render 'comments' %>
+            <p><strong>Here's what People are saying:</strong>
+              <%= render 'comments' %></p>
                
                   <%= will_paginate @comments, class: "comment-pagination"%>
                 </div>
             </div>
-          </div>
-        </div>
+         
       </div>
     </div>
    <%= render partial: 'new_comment' %>
