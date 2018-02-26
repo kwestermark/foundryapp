@@ -1,0 +1,931 @@
+/* line 7, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.form-comment {
+  margin-top: 4rem;
+  padding: 1.5rem 2rem;
+  width: auto;
+  border: 1px solid rgba(107, 124, 189, 0.7);
+  border-radius: 2px;
+}
+
+/* line 16, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comments-container {
+  width: 80%;
+  margin: 0 auto;
+  float: none;
+}
+
+/* line 22, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.rated {
+  display: inline-block;
+  width: 100px;
+  margin: 0 0 1rem 0;
+}
+/* line 27, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.rated img {
+  display: inline-block;
+}
+
+/* line 32, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.rating {
+  display: inline-block;
+  width: 100px;
+  margin: 1rem 0 0 0;
+}
+/* line 37, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.rating img {
+  display: inline-block;
+}
+
+/* line 42, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.highest-rating {
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+/* line 48, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-heading h4 {
+  margin: 2rem 0 1rem 1rem;
+}
+
+/* line 52, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.user-comment {
+  padding: 0 1rem;
+}
+/* line 55, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.user-comment hr {
+  margin: 1rem 0;
+  border-top: 1px solid #cccccc;
+  border-top-color: black;
+}
+
+/* line 62, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 67, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination {
+  background: white;
+  cursor: default;
+  width: auto;
+  margin: 0 auto;
+  /* self-clearing method: */
+}
+
+/* line 74, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination a, .comment-pagination span, .comment-pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+
+/* line 81, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination .disabled {
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+
+/* line 86, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #6b7cbd;
+  color: white;
+  border: 1px solid rgba(107, 124, 189, 0.7);
+}
+
+/* line 94, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination a {
+  text-decoration: none;
+  border: 1px solid rgba(107, 124, 189, 0.7);
+}
+
+/* line 99, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination a:hover, .comment-pagination a:focus {
+  color: #6b7cbd;
+  border-color: #6b7cbd;
+}
+
+/* line 104, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination .page_info {
+  background: #2e6ab1;
+  color: white;
+  padding: 0.4em 0.6em;
+  width: 22em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+
+/* line 113, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination .page_info b {
+  color: #000033;
+  background: #6aa6ed;
+  padding: 0.1em 0.25em;
+}
+
+/* line 119, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 127, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+* html .comment-pagination {
+  height: 1%;
+}
+
+/* line 131, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+*:first-child + html .comment-pagination {
+  overflow: hidden;
+}
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/raty.eot");
+  src: url("./fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("./fonts/raty.svg#raty") format("svg");
+  src: url("./fonts/raty.ttf") format("truetype");
+  src: url("./fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/* line 5, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+body {
+  font-family: 'open sans';
+}
+
+/* line 8, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 11, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+h2, h4, p {
+  text-align: left;
+}
+
+/* line 15, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.preview {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 996px) {
+  /* line 26, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+  .preview {
+    margin-bottom: 20px;
+  }
+}
+/* line 29, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.preview-pic {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+/* line 35, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.preview-thumbnail.nav-tabs {
+  border: none;
+  margin-top: 15px;
+}
+
+/* line 38, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.preview-thumbnail.nav-tabs li {
+  width: 18%;
+  margin-right: 2.5%;
+}
+
+/* line 41, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.preview-thumbnail.nav-tabs li img {
+  max-width: 100%;
+  display: block;
+}
+
+/* line 44, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.preview-thumbnail.nav-tabs li a {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 47, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.preview-thumbnail.nav-tabs li:last-of-type {
+  margin-right: 0;
+}
+
+/* line 50, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.tab-content {
+  overflow: hidden;
+}
+
+/* line 52, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.tab-content img {
+  width: 100%;
+  -webkit-animation-name: opacity;
+  animation-name: opacity;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+}
+
+/* line 59, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.card {
+  margin-top: 50px;
+  background: #eee;
+  padding: 3em;
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 997px) {
+  /* line 66, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+  .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/* line 72, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 84, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.colors {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+/* line 90, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product-title, .price, .sizes, .colors {
+  text-transform: UPPERCASE;
+  font-weight: bold;
+}
+
+/* line 94, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.checked, .price span {
+  color: #ff9f1a;
+}
+
+/* line 97, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product-title, .rating, .product-description, .price, .vote, .sizes {
+  margin-bottom: 15px;
+}
+
+/* line 100, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product-title {
+  margin-top: 0;
+}
+
+/* line 103, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.size {
+  margin-right: 10px;
+}
+
+/* line 105, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.size:first-of-type {
+  margin-left: 40px;
+}
+
+/* line 108, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.color {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 2em;
+  width: 2em;
+  border-radius: 2px;
+}
+
+/* line 115, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.color:first-of-type {
+  margin-left: 20px;
+}
+
+/* line 118, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.not-available {
+  text-align: center;
+  line-height: 2em;
+}
+
+/* line 121, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.not-available:before {
+  font-family: fontawesome;
+  content: "\f00d";
+  color: #fff;
+}
+
+/* line 126, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.orange {
+  background: #ff9f1a;
+}
+
+/* line 129, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.green {
+  background: #85ad00;
+}
+
+/* line 132, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.blue {
+  background: #0076ad;
+}
+
+/* line 135, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.tooltip-inner {
+  padding: 1.3em;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+    transform: scale(3);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+    transform: scale(3);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/* line 157, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.field {
+  color: black;
+}
+
+/* line 161, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product-reviews {
+  text-align: center;
+  float: left;
+  width: 33.3%;
+}
+
+/*create product container */
+/* Create three columns of equal width */
+/* line 171, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.columns {
+  float: left;
+  width: 33.3%;
+}
+
+/* Style the list */
+/* line 178, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.data {
+  list-style-type: none;
+  border: 1px solid black;
+  color: black;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Add shadows on hover */
+/* line 189, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product:hover {
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Product header */
+/* line 194, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product .header {
+  background-color: #8b9dc3;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+/* List items */
+/* line 201, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product li {
+  border: none;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+/* Grey list item */
+/* line 209, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product .action .grey {
+  background-color: #eee;
+  font-size: 20px;
+  color: black;
+}
+
+/* The "Sign Up" button */
+/* line 217, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.btn-default, .btn-primary {
+  background-color: #4099FF;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Change the width of the three columns to 100% 
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+  /* line 233, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+  .columns {
+    width: 100%;
+  }
+}
+/* line 238, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+#header-title {
+  text-align: center;
+  font-size: 48px;
+}
+
+/* line 242, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.productbox {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 8px 6px -6px  #999;
+}
+
+/* line 249, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.producttitle {
+  font-weight: bold;
+  padding: 5px 0 5px 0;
+  text-align: center;
+}
+
+/* line 255, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.productprice {
+  border-top: 1px solid #dadada;
+  padding-top: 5px;
+}
+
+/* line 260, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.thumbnail {
+  text-align: left;
+  border: 0px;
+}
+
+/* line 265, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product-desc {
+  text-align: left;
+}
+
+/* line 269, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product-color {
+  text-align: left;
+}
+
+/* line 274, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.product > img {
+  max-width: 230px;
+}
+
+/* line 279, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.content-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-top: 25px;
+  border: 0px;
+  border-radius: 0px;
+}
+
+/* line 287, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.container-fluid {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* line 292, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.view-wrapper {
+  float: right;
+  max-width: 70%;
+  margin-top: 25px;
+}
+
+/* line 298, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/products.scss */
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+  max-width: 100%;
+}
+/* line 3, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 10, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 16, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 19, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 23, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 29, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 33, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 40, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 45, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 49, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 55, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 63, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 74, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 80, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+/* line 8, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+html, body {
+  font-family: 'Lato', sans-serif;
+  color: #00000;
+  background: #eeeeee;
+  margin-bottom: 60px;
+  position: relative;
+  height: 100%;
+  margin: 0;
+}
+
+/* line 18, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.contact-page {
+  padding: 10px;
+}
+
+/* line 22, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 27, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+p > a:hover {
+  color: #d9d9d9;
+  text-decoration: underline;
+}
+
+/* line 33, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+h1, h2, h4 {
+  text-align: center;
+}
+
+/* line 37, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+._12 {
+  font-size: 1.2em;
+}
+
+/* line 41, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+._14 {
+  color: #0000ff;
+  font-size: 1.4em;
+}
+
+/* line 46, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/*** Carousel ***/
+/* line 53, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  margin: 40px auto;
+  height: 25%;
+  width: 50%;
+}
+
+/* line 60, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.carousel-caption {
+  font-family: 'Lato', sans-serif;
+  color: black;
+  font-size: 24px;
+}
+
+/*** Navigation ***/
+/* line 69, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+
+/* line 74, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.navbar-brand {
+  padding: 0px;
+}
+
+/* line 78, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.navbar-brand > img {
+  height: 25%;
+  padding: 15px;
+  width: 25%;
+}
+
+/* line 84, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.navbar-nav > li.navbar-right {
+  float: right !important;
+}
+
+/* line 88, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.navbar-collapse ul {
+  padding-right: 10px;
+}
+
+/* line 92, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.navbar-collapse ul li a {
+  text-transform: uppercase;
+}
+
+/* line 96, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.nav ul li a {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+/*** Site Sections ***/
+/* line 102, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* line 109, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.proj-title {
+  font-weight: 100;
+  text-align: left;
+}
+
+/**Footer **/
+/* line 116, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.footer {
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: #3a3737;
+}
+
+/* line 125, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.footer p {
+  margin: 20px 0;
+  color: #ffffff;
+}
+
+/*** social media ***/
+/* line 132, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.footer-social-icons {
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 138, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.social-icon {
+  color: #fff;
+}
+
+/* line 142, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+ul.social-icons {
+  margin-top: 10px;
+}
+
+/* line 146, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.social-icons li {
+  vertical-align: top;
+  display: inline;
+  height: 100px;
+}
+
+/* line 152, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 157, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.fa-facebook {
+  padding: 10px 14px;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #3B5998;
+}
+
+/* line 167, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.fa-facebook:hover {
+  background-color: #3d5b99;
+}
+
+/* line 171, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.fa-twitter {
+  padding: 10px 12px;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #4099FF;
+}
+
+/* line 181, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.fa-twitter:hover {
+  background-color: #00aced;
+}
+
+/* line 185, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.fa-linkedin {
+  padding: 10px 14px;
+  -o-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #007bb5;
+}
+
+/* line 194, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.fa-linkedin:hover {
+  background-color: #0073a4;
+}
+
+/* line 198, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.glyphicon:hover {
+  color: #0000EE;
+}
+
+/* line 202, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+.fa:hover {
+  color: #0000EE;
+}
+
+/**tooltip **/
+/* line 207, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+#scm, #spc {
+  color: #0000EE;
+}
+
+@media (max-width: 767px) {
+  /* line 212, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/static_pages.scss */
+  .footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+/* line 6, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/users.scss */
+h1, h2, h3, p {
+  text-align: center;
+  color: black;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
