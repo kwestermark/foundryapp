@@ -35,15 +35,13 @@
              
               <button type="button" class="btn btn-default" data-toggle ="modal", data-target="#myModal">write a review</button></div>
 
-      
           <div class="preview col-md-12">
-            <p><strong>See what other's are saying:</strong>
-              <%= render 'comments' %></p>
-               
+            <p><strong>See what other's are saying:</strong></p>
+              <p><%= render 'comments' %></p>
                   <%= will_paginate @comments, class: "comment-pagination"%>
                 </div>
+              </div>
+              </div>
             </div>
-         
       </div>
-    </div>
    <%= render partial: 'new_comment' %>
