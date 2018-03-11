@@ -2,17 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  font-family: 'open sans'; }
+html, body {
+  color: #00000;
+  position: relative;
+  margin:0;
+  margin-top: -30px;
+  height: 100%;
+  font-family: verdana;
+}
 
 img {
   max-width: 100%; }
-
-h2, h4 {
-    text-align: left;
-}
-
-
 
 .preview {
   display: -webkit-box;
@@ -60,26 +60,22 @@ h2, h4 {
 
 .card {
   margin-top: 50px;
-  background: #ffffff;
+  background: #fffff;
   padding: 3em;
-  line-height: 1.5em;
-
-}
+  line-height: 1.5em; }
 
 @media screen and (min-width: 997px) {
   .wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; } 
-  }
+    display: flex; } }
 
 .details {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  text-align: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -99,8 +95,8 @@ h2, h4 {
 .checked, .price span {
   color: #ff9f1a; }
 
-.product-title, .rating, .product-description, .price, .vote, .sizes {
-  margin-bottom: 15px; }
+.product-title, .product-description, .price, .vote, .sizes, .colors {
+  margin-bottom: 15px;}
 
 .product-title {
   margin-top: 0; }
@@ -119,6 +115,19 @@ h2, h4 {
   border-radius: 2px; }
   .color:first-of-type {
     margin-left: 20px; }
+
+.add-to-cart, .like, .review {
+  background: #ff9f1a;
+  padding: 1.2em 1.5em;
+  border: none;
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+  -webkit-transition: background .3s ease;
+          transition: background .3s ease; }
+  .add-to-cart:hover, .like:hover {
+    background: #b36800;
+    color: #fff; }
 
 .not-available {
   text-align: center;
@@ -159,6 +168,27 @@ h2, h4 {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1); } }
+
+@media screen and (min-width: 997px) {
+  .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } 
+  }
+
+.details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
 .field {
 	color: black;
 }
@@ -176,7 +206,6 @@ h2, h4 {
 .columns {
     float: left;
     width: 33.3%;
-
 }
 
 /* Style the list */
@@ -242,8 +271,18 @@ h2, h4 {
 
 #header-title{
     text-align: center;
-    font-size: 48px;
 }
+
+.header-title{
+    text-align: center;
+}
+
+#rated{
+    display:inline-block;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
 .productbox {
     background-color:#ffffff;
     padding:10px;
@@ -275,11 +314,9 @@ h2, h4 {
     text-align: left;
 }
 
-
 .product>img{
     max-width: 230px;
 }
-
 
 .content-wrapper {
     max-width: 1140px;
@@ -292,6 +329,13 @@ h2, h4 {
 .container-fluid{
     max-width: 1140px;
     margin: 0 auto;
+    text-align: left;
+}
+
+.container-fluid {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .view-wrapper {
@@ -300,8 +344,53 @@ h2, h4 {
     margin-top: 25px;
 }
 
-.container {
+.container-fluid{
     padding-left: 0px;
     padding-right: 0px;
     max-width: 100%;
+    margin-top: 25px;
+    margin-bottom: 20px;    
+    text-align: center;
 }
+
+.description{
+  text-align: left;
+}
+
+.price{
+  text-align: left;
+}
+
+.sizes{
+  text-align: left;
+}
+
+.colors{
+  text-align: left;
+}
+
+.color{
+  text-align: left;
+}
+
+.action{
+  text-align: left;
+}
+
+//product 
+
+.team-sec{float: left;width: 100%;}
+.team .photo {width: 250px; height: 250px; display: inline-block; overflow: hidden; position: relative; }
+.photo-shadow {position: absolute; z-index: -1; top: 12px; left: 16px; bottom: -10px; border: 1px solid #E3E3E3; height: 250px; width: 246px; background: #fff; }
+.col-item{position: relative;}
+.team{margin-top: 60px;}
+.team .photo img{width: 100%;    vertical-align: middle;position: relative;}
+.social-connect{margin-top: 13px;}
+.info{margin-top: 65px;}
+.info .name{font-size: 18px;font-weight: 600;margin-bottom: 2px;}
+.info .degination{font-size: 16px;font-weight: 300;font-style: italic;color: #8B8B8B;}
+.social-connect a{ display: inline-block; border: 1px solid #E3E3E3; font-size: 14px; color: #919191; width: 24px; height: 24px; text-align: center; line-height: 24px;margin-right: 4px;}
+.social-connect a .fa{margin: 0;}
+.social-connect a:hover{background-color: #4EBEE9;color: #fff;} .carousel-line{    border: 1px solid #ddd; height: 320px; position: absolute; bottom: -90px; width: 110%; left: -5.5%;}
+.carousel-line > .controls{position: absolute; bottom: -16px; left: 50%; margin-left: -50px; background: #fff; padding: 0px 20px; color: #000;}
+.carousel-line > .controls > a{    color: #868686; font-size: 24px; font-weight: 300;}

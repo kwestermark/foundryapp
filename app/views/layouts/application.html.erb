@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Orbit Bike Shop</title><%= csrf_meta_tags %>
-
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <head>
+    <title>French City Bike's</title><%= csrf_meta_tags %>
   
-  <!-- Bootstrap core CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag %>
+<!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- Custom CSS -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,79 +19,79 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <!-- Bootstrap core JS -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-</head>
-<body class="anchor-top">
+     
+  </head>
+
+  <body>
 
   <% if notice %>
     <p id="notice" class="alert alert-info"><%= notice %></p>
-<% end %>
-
-<% if alert %>
+  <% end %>
+  <% if alert %>
     <p id="alert" class="alert alert-info"><%= alert %></p>
-<% end %>
+  <% end %>
 
   <!-- Fixed navbar -->
-<nav class="navbar navbar-default" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>  </div>  
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+      </div>
 
-  <!-- Nav links, forms, and other content for toggling -->
-  <div class="navbar-collapse collapse" id="navbar-collapsible">
-    <ul class="nav navbar-nav navbar-left">
-      <li>  <%= link_to "French Spring Bikes", root_path , class: "navbar-brand" %></li>
-    </ul>
+    <!-- Nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left">
+          <li>  <%= link_to "French Spring Bikes", root_path , class: "navbar-brand" %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left navbar-nav-primary">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Products', products_path %></li>
+          <li><%= link_to 'About', static_pages_about_path %></li>
+          <li><%= link_to 'Contact', static_pages_contact_path %></li>
+          <li><%= link_to 'Users', users_path %></li>
+        </ul>
+      <div class="navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+          <li> <%= render 'devise/menu/user_nav' %></li>
+        </ul>
+      </div>
 
-    <ul class="nav navbar-nav navbar-center">
-      <li><%= link_to 'Home', root_path %></li>
-      <li><%= link_to 'Products', products_path %></li>
-      <li><%= link_to 'About', static_pages_about_path %></li>
-      <li><%= link_to 'Contact', static_pages_contact_path %>
-      <li><%= link_to 'Users', users_path %></li>
-    </ul>
-
-    <div class="navbar-form navbar-right">
-      <ul class="nav navbar-nav navbar-right">
-           <li> <%= render 'devise/menu/user_nav' %></li>
-      </ul>
-    </div></li></ul></div>
-
-     <!-- Search Box -->
-    <div class="navbar-form navbar-right">
-        <div class="input-group">
-          <%= form_tag("/products", method: "get", class:"navbar-form navbar-right") do %> 
+   <!-- Search Box -->
+    <form class="navbar-form-search" role="search">
+      <div class="navbar-nav navbar-right">
+        <div class="search-input-group">
+          <%= form_tag("/products", method: "get", class:"navbar-form navbar-center") do %><button class="btn btn-md btn-search" type="submit"><span><i class="fa fa-search" aria-hidden="true"></i></span></button> 
           <%= label_tag(:q, "Search for:", class:"hidden") %>
           <%= text_field_tag(:q, "", type:"text", class:"form-control", placeholder:"Search") %>
-          <%= button_tag raw("<i><class='srch-control-icon-srch'></i> search"), class: "button round" %> 
         </div>
       </div>
-    </form>
+    </form> 
+  </div><!-- /.container-fluid -->
   </nav>
-  </div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
-    </nav>
   <% end %>
 <%= yield %>
 
- <!--Footer Section -->
-  <footer>
+<!--Footer Section -->
+<footer>
   <div class="footer">
     <div class="container-fluid">
       <h4 class="_14">Follow me on</h4>
-    <ul class="social-icons">
-        <li><a href="https://www.facebook.com/kristina.westermarktaylor" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://twitter.com/kwestermark1" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/kristinawestermarktaylor/" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-    </ul>
+        <ul class="social-icons">
+          <li><a href="https://www.facebook.com/kristina.westermarktaylor" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/kwestermark1" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/kristinawestermarktaylor/" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+        </ul>
     <p> &copy; Web Development by Kristina R. Taylor 2017</p>
+    </div>
   </div>
-</div>
 </footer>
 
   <!--End Footer Section -->
   </body>
+  </html>
 </html>

@@ -6,17 +6,41 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 html, body {
-    font-family: 'Lato', sans-serif;
-    color: #00000;
-    margin-bottom: 60px;
-    position: relative;
-    height: 100%;
-    margin:0;
+  color: #00000;
+  margin:0;
+  margin-top: -30px;
+  height: 100%;
+  position: relative;
+  font-family: verdana;
 }
 
-.contact-page{
-    padding: 10px;
+.form-control {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
 }
+
+.form.control button {
+  margin-left: -5px;
+  height: 26px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 0 3px;
+}
+
+.form.control button:hover {
+  background: #0b7dda;
+}
+
+.form.control::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
 a {
     text-decoration: none;
@@ -49,25 +73,17 @@ ul {
 
 /*** Carousel ***/
 
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-
-    margin: 40px auto;
-    height: 25%;
-    width: 50%;
+carousel{
+    margin-top: 20px;
 }
 
-.carousel-caption{
-  font-family: 'Lato', sans-serif;
-  color: black;
-  font-size: 24px;
-
-}
 
 /*** Navigation ***/
 
 .navbar-nav > li {
-    float: none;
-    display: inline-block;
+  float: none;
+  display: inline-block;
+  height: auto !important;
   }
 
 .navbar-brand {
@@ -76,7 +92,7 @@ ul {
 
 .navbar-brand>img {
   height: 25%;
-  padding: 15px;
+  padding: 5px;
   width: 25%;
 }
 
@@ -85,7 +101,7 @@ ul {
   }
 
 .navbar-collapse ul{
-  padding-right: 10px;
+  padding-right: 50px;
 }
 
 .navbar-collapse ul li a{
@@ -95,6 +111,25 @@ ul {
 .nav ul li a{
   font-family: Futura, Helvetica, Arial, sans-serif;
 }
+
+/** Carousel **/
+
+.img-slider {
+  height: 400px;
+  width: auto;
+}
+
+.inner-item {
+    text-align: center;
+    img {
+        margin: 0 auto;
+    }
+}
+
+.carousel {
+  margin-bottom: 50px;
+}
+
 
 /*** Site Sections ***/
 
@@ -115,11 +150,12 @@ ul {
 .footer {
   bottom: 0;
   width: 100%;
-  padding: 1rem;
+  height: 160px;
+  min-height: 100%;
+  margin-bottom: -160px;
   text-align: center;
   background-color: #3a3737;
 }
-
 
 .footer p {
   margin: 20px 0;
@@ -208,12 +244,55 @@ ul.social-icons{
 }
 
 @media (max-width: 767px) {
-        .footer {
-          margin-left: -20px;
-          margin-right: -20px;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-      }
+  .footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+/*panel align center*/
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    padding-top:5px;
+}
+/*property for the bootstrap panel*/
+.panel  {
+-webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.panel-default > .panel-heading {
+  color: #000 !important;
+  background: #80bfff; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #80bfff, #ffffff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #80bfff, #ffffff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #80bfff, #ffffff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #80bfff, #ffffff); /* Standard syntax */
+  border-color: #99ccff !important;
+  height:80px;
+}
+
+/*property for the HTML input placeholder*/
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+/*property for reset button*/
+button[type="reset"]    {
+    background-color:transparent;
+    border:1px solid black;
+}
+
+/*Glyphicon color*/
+.blue   {
+    color: #80bfff;
+}
 

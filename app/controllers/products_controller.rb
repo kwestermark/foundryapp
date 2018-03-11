@@ -33,7 +33,7 @@ end
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    @posts = Post.paginate(:page => params[:page])
+    #@posts = Post.paginate(:page => params[:page])
 
 
     respond_to do |format|

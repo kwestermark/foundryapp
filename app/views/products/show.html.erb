@@ -1,47 +1,63 @@
-    <div class="card"
-      <div class="container">
+ <%= link_to 'Back', products_path %>
+ <p id="notice"><%= notice %></p>  
+<div class="container-fluid">
+    <div class="card">
         <div class="row">
-          <div class="preview col-md-6">
-            <p id="notice"><%= notice %></p>
-            <%= link_to 'Back', products_path %>
-      
+          <div class="column col-md-6">
           <div class="preview-pic tab-content">
               <div class="tab-pane active" id="pic-1"><%= image_tag @product.image_url, class: 'img-responsive' %></div>
               <div class="tab-pane" id="pic-2"><%= image_tag @product.image_url, class: 'img-responsive' %></div>
               <div class="tab-pane" id="pic-3"><%= image_tag @product.image_url, class: 'img-responsive' %></div>
               <div class="tab-pane" id="pic-4"><%= image_tag @product.image_url, class: 'img-responsive' %></div>
             </div>
-            <ul class="preview-thumbnail nav nav-tabs">
-              <li class="active"><a data-target="#pic-1" data-toggle="tab"><%= image_tag @product.image_url, class: 'img-responsive' %></a></li>
-              <li><a data-target="#pic-2" data-toggle="tab"><%= image_tag @product.image_url, class: 'img-responsive' %></a></li>
-              <li><a data-target="#pic-3" data-toggle="tab"><%= image_tag @product.image_url, class: 'img-responsive' %></a></li>
-              <li><a data-target="#pic-4" data-toggle="tab"><%= image_tag @product.image_url, class: 'img-responsive' %></a></li>
-            </ul>
-          </div>
-
-          <div class="details col-md-6">
-            <div class="col-md-12">
-            <h3 class="product-title"><%= @product.name %></h3>
-
-            <p><strong>Average Rating:</strong>
-              <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></p></div>
-      
-            <span class="product-description"><%= @product.description %></span>
-            <span class="price">Current Price: <span>$<%= @product.price %>.00</span></span>
-            
-            <span class="price">Current Colors: <span><%= @product.color %></span></span>
-
-            <div class="action">
-             
-              <button type="button" class="btn btn-default" data-toggle ="modal", data-target="#myModal">write a review</button></div>
-
-          <div class="preview col-md-12">
-            <p><strong>See what other's are saying:</strong></p>
-              <p><%= render 'comments' %></p>
-                  <%= will_paginate @comments, class: "comment-pagination"%>
-                </div>
-              </div>
-              </div>
-            </div>
+          
+          <ul class="preview-thumbnail nav nav-tabs">
+            <li class="active"><a data-target="#pic-1" data-toggle="tab"><%= image_tag @product.image_url, class: 'img-responsive' %></a></li>
+            <li><a data-target="#pic-2" data-toggle="tab"><%= image_tag @product.image_url, class: 'img-responsive' %></a></li>
+            <li><a data-target="#pic-3" data-toggle="tab"><%= image_tag @product.image_url, class: 'img-responsive' %></a></li>
+            <li><a data-target="#pic-4" data-toggle="tab"><%= image_tag @product.image_url, class: 'img-responsive' %></a></li>
+          </ul>
       </div>
+
+    <div class="column col-md-6">
+      <h3 class="header-title"><strong><%= @product.name %></strong></h3>
+      <div class="ratings">
+      <h5 class="header-title"><strong>Average Rating</strong></h5>
+      <h5 id="rated" class="rated" data-score="<%= @product.average_rating %>"></h5>
+      <h5 class="description">
+      <span class="product-description"><%= @product.description %></span></h5></div><br>
+     <h5 class="colors">
+      <span class="colors">In Store Color: <span><%= @product.color %></span></span></h5>
+      <h5 class="prices">
+      <span class="prices">Current Price: <span>$<%= @product.price %>.00</span></span></h5>
+      <h5 class="sizes">sizes:
+        <span class="size" data-toggle="tooltip" title="small">s</span>
+        <span class="size" data-toggle="tooltip" title="medium">m</span>
+        <span class="size" data-toggle="tooltip" title="large">l</span>
+        <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+      </h5>
+      <h5 class="colors">colors:
+              <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+              <span class="color green"></span>
+              <span class="color blue"></span>
+            </h5></br>
+      <div class="action">
+        <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+        <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+        <button type="button" class="review btn btn-default" data-toggle ="modal", data-target="#myModal">write a review</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="column col-md-12">
+       
+        <p><%= render 'comments' %></p>
+        <%= will_paginate @comments, class: "comment-pagination"%>
+      </div>
+    </div>
+  </div>
    <%= render partial: 'new_comment' %>
+ </div>
+</div>

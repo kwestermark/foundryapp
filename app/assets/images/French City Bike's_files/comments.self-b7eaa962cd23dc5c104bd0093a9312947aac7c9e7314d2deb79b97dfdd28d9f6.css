@@ -1,0 +1,146 @@
+/* line 7, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.form-comment {
+  margin-top: 4rem;
+  padding: 1.5rem 2rem;
+  width: auto;
+  border: 1px solid rgba(107, 124, 189, 0.7);
+  border-radius: 2px;
+}
+
+/* line 16, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comments-container {
+  width: 80%;
+  margin: 0 auto;
+  float: none;
+}
+
+/* line 22, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.rated {
+  display: inline-block;
+  width: 100px;
+  margin: 0 0 1rem 0;
+}
+/* line 27, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.rated img {
+  display: inline-block;
+}
+
+/* line 32, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.rating {
+  display: inline-block;
+  width: 100px;
+  margin: 1rem 0 0 0;
+}
+/* line 37, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.rating img {
+  display: inline-block;
+}
+
+/* line 42, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.highest-rating {
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+/* line 48, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-heading h4 {
+  margin: 2rem 0 1rem 1rem;
+}
+
+/* line 52, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.user-comment {
+  padding: 0 1rem;
+}
+/* line 55, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.user-comment hr {
+  margin: 1rem 0;
+  border-top: 1px solid #cccccc;
+  border-top-color: black;
+}
+
+/* line 62, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 67, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination {
+  background: white;
+  cursor: default;
+  width: auto;
+  margin: 0 auto;
+  /* self-clearing method: */
+}
+
+/* line 74, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination a, .comment-pagination span, .comment-pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+
+/* line 81, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination .disabled {
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+
+/* line 86, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #6b7cbd;
+  color: white;
+  border: 1px solid rgba(107, 124, 189, 0.7);
+}
+
+/* line 94, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination a {
+  text-decoration: none;
+  border: 1px solid rgba(107, 124, 189, 0.7);
+}
+
+/* line 99, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination a:hover, .comment-pagination a:focus {
+  color: #6b7cbd;
+  border-color: #6b7cbd;
+}
+
+/* line 104, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination .page_info {
+  background: #2e6ab1;
+  color: white;
+  padding: 0.4em 0.6em;
+  width: 22em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+
+/* line 113, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination .page_info b {
+  color: #000033;
+  background: #6aa6ed;
+  padding: 0.1em 0.25em;
+}
+
+/* line 119, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+.comment-pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 127, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+* html .comment-pagination {
+  height: 1%;
+}
+
+/* line 131, /Users/ktaylor/Desktop/foundryapp/app/assets/stylesheets/comments.scss */
+*:first-child + html .comment-pagination {
+  overflow: hidden;
+}
