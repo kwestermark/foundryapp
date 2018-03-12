@@ -62,19 +62,21 @@
       </div>
 
    <!-- Search Box -->
-    <form class="navbar-form-search" role="search">
       <div class="navbar-nav navbar-right">
         <div class="search-input-group">
           <%= form_tag("/products", method: "get", class:"navbar-form navbar-center") do %><button class="btn btn-md btn-search" type="submit"><span><i class="fa fa-search" aria-hidden="true"></i></span></button> 
           <%= label_tag(:q, "Search for:", class:"hidden") %>
           <%= text_field_tag(:q, "", type:"text", class:"form-control", placeholder:"Search") %>
+             <% end %>
         </div>
       </div>
-    </form> 
   </div><!-- /.container-fluid -->
   </nav>
-  <% end %>
+
+<div class="site-content">
 <%= yield %>
+
+</div>
 
 <!--Footer Section -->
 <footer>

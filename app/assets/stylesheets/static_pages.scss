@@ -14,6 +14,10 @@ html, body {
   font-family: verdana;
 }
 
+.site-content {
+  padding-bottom: 160px;
+}
+
 .form-control {
   padding: 10px;
   font-size: 17px;
@@ -151,8 +155,7 @@ carousel{
   bottom: 0;
   width: 100%;
   height: 160px;
-  min-height: 100%;
-  margin-bottom: -160px;
+  position: fixed;
   text-align: center;
   background-color: #3a3737;
 }
