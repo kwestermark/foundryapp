@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
     create_table :users do |t|
       t.string :first_name
       t.string :last_name
-      t.boolean :admin_flag
+      t.boolean :admin
 
       t.timestamps
     end
