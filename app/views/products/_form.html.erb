@@ -17,8 +17,8 @@
           <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: @product.image_url) %>
         <% end %>
       </div>
-    <div class="col-xs-12 col-md-5 product-specs">
 
+  <div class = "container">
       <div class="form-group">
       <%= f.label :name %>
       <%= f.text_field :name, class:"form-control", placeholder: "Enter Product Name" %>
@@ -43,10 +43,10 @@
     <%= f.label :price %>
     <%= f.text_field :price, class:"form-control", placeholder: "Enter Product Price" %>
     </div>
-
+  </div>
+  <div class="container">
     <div class="actions">
     <%= f.submit class:"btn btn-default" %>
   </div>
-  </div><!--col-md-6-->
-  </div><!--row-->
+  </div>
 <% end %>
